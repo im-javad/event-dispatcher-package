@@ -9,8 +9,17 @@ class Dispatcher{
         return $this->listeners;
     }
 
-    public function addListener(string $listenerName , Event $event)
+    public function addListener(string $eventName , Listener $listener)
     {
-        $this->listeners[$listenerName][] = $event;
+        $this->listeners[$eventName][] = $listener;
+    }
+
+    public function getListenersByEvent(string $eventName)
+    {
+        return $this->hasListener($eventName) ? $this->listeners[$eventName] : null;
+    }
+
+    public function hasListener(string $eventName){
+        return isset($this->listeners[$eventName]);
     }
 }
