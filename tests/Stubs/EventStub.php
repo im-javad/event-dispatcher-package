@@ -5,6 +5,6 @@ use App\Core\Event;
 
 class EventStub extends Event{
     public function getName(){
-        return 'EventStub';
+        return 'UserLogOut';
     }
 }

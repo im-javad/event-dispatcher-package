@@ -2,5 +2,10 @@
 namespace App\Core;
 
 abstract class Event{
-    abstract public function getName();
+    public function getName(){
+        $reflection = new \ReflectionClass($this);
+
+        
+        return $reflection->getShortName();
+    }
 }
