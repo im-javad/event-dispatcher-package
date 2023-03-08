@@ -4,7 +4,8 @@ namespace App\Tests\Stubs;
 use App\Core\Event;
 
 class EventStub extends Event{
-    public function getName(){
+    public function getName()
+    {
         return 'UserLogOut';
     }
 }

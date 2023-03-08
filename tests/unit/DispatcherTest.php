@@ -5,9 +5,6 @@ use App\Core\Dispatcher as CoreDispatcher;
 use App\Tests\Stubs\ListenerStub;
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertCount;
-use function PHPUnit\Framework\assertFalse;
-
 class DispatcherTest extends TestCase{
     /**
      * @test

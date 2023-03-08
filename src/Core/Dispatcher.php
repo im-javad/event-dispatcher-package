@@ -19,7 +19,15 @@ class Dispatcher{
         return $this->hasListener($eventName) ? $this->listeners[$eventName] : null;
     }
 
-    public function hasListener(string $eventName){
+    public function hasListener(string $eventName)
+    {
         return isset($this->listeners[$eventName]);
+    }
+    
+    public function dispatch(Event $event)
+    {
+        foreach ($this->getListenersByEvent($event->getName()) as $listener) {
+            $listener->handle($event);
+        }
     }
 }
