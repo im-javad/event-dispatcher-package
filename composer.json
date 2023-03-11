@@ -1,8 +1,11 @@
 {
   "name": "im-javad/event-dispatcher-package",
-  "description": ".........",
-  "type": "project",
+  "description": "Event-Dispatcher package by pure PHP",
+  "type": "library",
   "license": "MIT",
+  "require": {
+    "php" : ">=8.1"
+  },
   "authors": [
     {
       "name": "Javad Jadidi",
